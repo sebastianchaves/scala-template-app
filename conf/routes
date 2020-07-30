@@ -1,1 +1,4 @@
-GET     /test       com.schaves.scala.template.SimpleController.get
+GET         /test           com.schaves.scala.template.SimpleController.get
+
+GET         /products       com.schaves.scala.template.SimpleController.getProducts
+GET         /products/:id   com.schaves.scala.template.SimpleController.getProduct(id)
