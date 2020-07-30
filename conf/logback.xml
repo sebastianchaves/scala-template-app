@@ -1,15 +1,13 @@
-<configuration>
-    <conversionRule conversionWord="coloredLevel" converterClass="play.api.Logger$ColoredLevel" />
+<configuration scan="true">
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%date %coloredLevel %logger - [%level] %message%n%xException</pattern>
-        </encoder>
+        <layout>
+            <pattern>%date{"yyyy-MM-dd'T'HH:mm:ss,SSSXXX", UTC} %-4p [${HOSTNAME}] %msg%n</pattern>
+        </layout>
     </appender>
 
-    <logger name="reactivemongo" level="WARN" />
-
-    <root level="WARN">
-        <appender-ref ref="STDOUT" />
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
     </root>
+
 </configuration>

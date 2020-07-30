@@ -11,4 +11,5 @@ libraryDependencies ++= Dependencies.scalaTemplateDependencies
 
 resolvers += Resolver.sonatypeRepo("snapshots")
 resolvers += Resolver.sonatypeRepo("releases")
-resolvers += "Sonatype-public" at "http://oss.sonatype.org/content/groups/public/"
+
+resolvers += ("Sonatype-public" at "http://oss.sonatype.org/content/groups/public/").withAllowInsecureProtocol(true)

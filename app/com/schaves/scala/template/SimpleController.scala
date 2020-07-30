@@ -20,11 +20,10 @@ class SimpleController @Inject()(implicit ec: ExecutionContext,
   }
 
   def create: Action[AnyContent] = Action.async { implicit request =>
-    repository.insert.map(result => Ok(Json.toJson(result)))
+    //repository.insert.map(result => Ok(Json.toJson(result)))
+    ???
   }
 
-//  def getProducts: Action[AnyContent] = Action.async {
-//    repository.findAll.map(products => Ok(Json.toJson(products)))
-//  }
+  def getProducts: Action[AnyContent] = ???
 
 }
