@@ -1,14 +1,14 @@
 package com.schaves.scala.template
 
+import com.schaves.scala.template.products.ProductsRepository
 import javax.inject.Inject
-import play.api.libs.json.Json
-import play.api.mvc.{AbstractController, Action, AnyContent, ControllerComponents, Request}
+import play.api.mvc.{AbstractController, Action, AnyContent, ControllerComponents}
 
 import scala.concurrent.ExecutionContext
 
 class SimpleController @Inject()(implicit ec: ExecutionContext,
                                  cc: ControllerComponents,
-                                 repository: ProductRepository) extends AbstractController(cc) {
+                                 repository: ProductsRepository) extends AbstractController(cc) {
 
   def get: Action[AnyContent] = Action { implicit request =>
     Ok(s"Got request [$request]")

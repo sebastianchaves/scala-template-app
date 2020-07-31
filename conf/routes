@@ -1,9 +1,7 @@
-GET         /test               com.schaves.scala.template.SimpleController.get
+GET         /health-check       com.schaves.scala.template.utils.HealthCheckController.healthCheck
 
-GET         /products           com.schaves.scala.template.SimpleController.getProducts
-GET         /products/:id       com.schaves.scala.template.SimpleController.getProduct(id)
+# Products API
+GET         /products           com.schaves.scala.template.products.ProductsController.getAll
+GET         /products/:id       com.schaves.scala.template.products.ProductsController.getBy(id)
 
-GET         /index              com.schaves.scala.template.ProductController.index
-GET         /resources/:id      com.schaves.scala.template.ProductController.getWithPathVariable(id)
-GET         /resources          com.schaves.scala.template.ProductController.getWithQueryParam(name)
-
+POST        /products           com.schaves.scala.template.products.ProductsController.create
